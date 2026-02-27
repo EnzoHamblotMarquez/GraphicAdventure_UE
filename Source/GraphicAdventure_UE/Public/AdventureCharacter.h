@@ -4,16 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "MyCharacter.generated.h"
+#include "AdventureCharacter.generated.h"
 
 UCLASS()
-class GRAPHICADVENTURE_UE_API AMyCharacter : public ACharacter
+class GRAPHICADVENTURE_UE_API AAdventureCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
-	AMyCharacter();
+	AAdventureCharacter();
 
 protected:
 	// Called when the game starts or when spawned
