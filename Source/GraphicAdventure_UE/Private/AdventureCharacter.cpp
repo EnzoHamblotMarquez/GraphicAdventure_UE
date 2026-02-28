@@ -41,11 +41,11 @@ void AAdventureCharacter::BeginPlay()
 
 	if (Controller)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Character is possessed!"));
+		UE_LOG(LogTemp, Warning, TEXT("Character is possessed"));
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Character is NOT possessed!"));
+		UE_LOG(LogTemp, Warning, TEXT("Character is NOT possessed"));
 	}
 }
 
