@@ -72,7 +72,7 @@ void AAdventureCharacter::Move(const FInputActionValue& value)
 		//UCharacterMovementComponent* CharMov = GetCharacterMovement();
 		//UE_LOG(LogTemp, Warning, TEXT("MovementMode: %d"), CharMov->MovementMode);
 
-		UE_LOG(LogTemp, Warning, TEXT("Move X: %f, Y: %f"), movementVector.X, movementVector.Y);
+		//UE_LOG(LogTemp, Warning, TEXT("Move X: %f, Y: %f"), movementVector.X, movementVector.Y);
 	}
 }
 
