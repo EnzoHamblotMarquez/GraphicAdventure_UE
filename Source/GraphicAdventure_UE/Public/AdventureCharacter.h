@@ -3,6 +3,7 @@
 #pragma once
 
 #include "InputActionValue.h"
+#include "InteractionComponent.h"
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
@@ -28,9 +29,15 @@ protected:
 	//Move Function
 	void Move(const FInputActionValue& value);
 
-	//Move Input Action 
+	//Interact Function 
+	void Interact();
+	UInteractionComponent* Interaction;
+
+	//Input Actions
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input");
 	class UInputAction* MoveAction;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input");
+	class UInputAction* InteractAction;
 
 public:
 	// Called every frame

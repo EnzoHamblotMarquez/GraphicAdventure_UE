@@ -7,13 +7,10 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputAction.h"
 
-#include "GameFramework/CharacterMovementComponent.h" //!
-
-
 // Sets default values
 AAdventureCharacter::AAdventureCharacter()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 }
@@ -27,25 +24,14 @@ void AAdventureCharacter::BeginPlay()
 	{
 		if (UEnhancedInputLocalPlayerSubsystem* subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(playerController->GetLocalPlayer())) // UEnhancedInputLocalPlayerSubsystem is the piece of code in charge of handling input context for Enhanced Input. // playerController->GetLocalPlayer() gets the local player object tied to this controller. // ULocalPlayer::GetSubsystem fetches the Enhanced Input Subsystem for that player
 		{
-			subsystem->AddMappingContext(PlayerMappingContext, 0); 
+			subsystem->AddMappingContext(PlayerMappingContext, 0);
 			UCharacterMovementComponent* charMov = playerController->GetCharacter()->GetCharacterMovement();
 		}
 	}
 
 	UCharacterMovementComponent* CharMov = GetCharacterMovement();
-	if (CharMov)
-	{
-		CharMov->SetMovementMode(MOVE_Walking);
-	}
 
-	if (Controller)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Character is possessed"));
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Character is NOT possessed"));
-	}
+	Interaction = FindComponentByClass<UInteractionComponent>();
 }
 
 void AAdventureCharacter::Move(const FInputActionValue& value)
@@ -63,9 +49,14 @@ void AAdventureCharacter::Move(const FInputActionValue& value)
 		const FVector rightDir = FRotationMatrix(yawRotation).GetUnitAxis(EAxis::Y);
 
 		//Add Movement
-		AddMovementInput(GetActorForwardVector(), movementVector.Y);
+		AddMovementInput(FVector::ForwardVector, movementVector.Y);
 		AddMovementInput(FVector::RightVector, movementVector.X);
 	}
+}
+
+void AAdventureCharacter::Interact()
+{
+	Interaction->OnInteraction();
 }
 
 // Called every frame
@@ -82,6 +73,7 @@ void AAdventureCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 	if (UEnhancedInputComponent* enhancedInputComponent = CastChecked<UEnhancedInputComponent>(PlayerInputComponent)) //By default unreal passes a generic UInputComponent, but since we are using the Enhanced Input Component we need to ensure the cast is valid (if it's not, CastChecked will cause an error)
 	{
 		enhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AAdventureCharacter::Move);
+		enhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this, &AAdventureCharacter::Interact);
 	}
 }
 

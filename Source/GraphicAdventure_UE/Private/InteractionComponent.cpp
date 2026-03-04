@@ -19,7 +19,7 @@ void UInteractionComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	Owner = Cast<AAdventureCharacter>(GetOwner());
+	Owner = Cast<AActor>(GetOwner());
 	
 }
 
@@ -29,6 +29,10 @@ void UInteractionComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+}
+
+void UInteractionComponent::OnInteraction()
+{
 	CheckInteractionRadius(*NPC, *Owner);
 }
 
@@ -39,7 +43,23 @@ void UInteractionComponent::CheckInteractionRadius(AActor& interactable, AActor&
 
 	if (Distance < InteractionRadius)
 	{
+		CheckInteractionCone(interactable, player);
+	}
+}
+void UInteractionComponent::CheckInteractionCone(AActor& interactable, AActor& player)
+{
+	FVector Direction = (interactable.GetActorLocation() - player.GetActorLocation()).GetSafeNormal();
+	FVector PlayerForward = player.GetActorForwardVector();
+
+
+	float dot = Direction | PlayerForward;
+	float cosValue = FMath::Cos(FMath::DegreesToRadians(InteractionAngle / 2));
+
+	//UE_LOG(LogTemp, Warning, TEXT("AngleCos: %f, CosValue: %f"), dot, cosValue);
+	if (dot > cosValue)
+	{
 		UE_LOG(LogTemp, Warning, TEXT("Event"));
 	}
+	
 }
 

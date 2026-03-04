@@ -5,7 +5,6 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "AdventureCharacter.h"
 #include "InteractionComponent.generated.h"
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -17,11 +16,13 @@ public:
 	// Sets default values for this component's properties
 	UInteractionComponent();
 
+	void OnInteraction();
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-	AAdventureCharacter* Owner;
+	AActor* Owner;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Interaction");
 	AActor* NPC;
@@ -29,7 +30,11 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Interaction");
 	float InteractionRadius = 10.f;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Interaction");
+	float InteractionAngle = 60.f;
+
 	void CheckInteractionRadius(AActor& interactable, AActor& player);
+	void CheckInteractionCone(AActor& interactable, AActor& player);
 
 public:	
 	// Called every frame
