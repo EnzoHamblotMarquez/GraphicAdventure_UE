@@ -7,11 +7,36 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputAction.h"
 
+#include "GameFramework/CharacterMovementComponent.h"
+
 // Sets default values
 AAdventureCharacter::AAdventureCharacter()
 {
 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
+	SpringArm->SetupAttachment(RootComponent);
+
+	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
+	Camera->SetupAttachment(SpringArm);
+
+
+	// Enable rotation toward movement direction
+	bUseControllerRotationYaw = false; // Character rotation is independent
+	GetCharacterMovement()->bOrientRotationToMovement = true; // Character faces movement direction
+	GetCharacterMovement()->RotationRate = FRotator(0.f, 720.f, 0.f);
+
+	// Controller input does not rotate spring arm
+	SpringArm->bUsePawnControlRotation = false;
+	SpringArm->bInheritPitch = false;
+	SpringArm->bInheritYaw = false;
+	SpringArm->bInheritRoll = false;
+	
+
+	// Avoid camera rotation
+	Camera->bUsePawnControlRotation = false; //?
+	SpringArm->SetUsingAbsoluteRotation(true); //? // Keep spring arm rotation fixed
 
 }
 
@@ -42,15 +67,16 @@ void AAdventureCharacter::Move(const FInputActionValue& value)
 		FVector2D movementVector = value.Get<FVector2D>();
 
 		//Get forward and right direction
-		const FRotator cameraRotation = Controller->GetControlRotation();
+		const FRotator cameraRotation = Camera->GetComponentRotation();
 		const FRotator yawRotation(0.f, cameraRotation.Yaw, 0.f);
 
 		const FVector forwardDir = FRotationMatrix(yawRotation).GetUnitAxis(EAxis::X); //Convert the yaw rotation into a matrix and extract the axis corresponding to X
 		const FVector rightDir = FRotationMatrix(yawRotation).GetUnitAxis(EAxis::Y);
 
 		//Add Movement
-		AddMovementInput(FVector::ForwardVector, movementVector.Y);
-		AddMovementInput(FVector::RightVector, movementVector.X);
+		AddMovementInput(forwardDir, movementVector.Y);
+		AddMovementInput(rightDir, movementVector.X);
+		//AddControllerYawInput(1 * FMath::Sign(movementVector.X));
 	}
 }
 

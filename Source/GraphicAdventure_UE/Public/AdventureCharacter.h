@@ -5,6 +5,9 @@
 #include "InputActionValue.h"
 #include "InteractionComponent.h"
 
+#include "Camera/CameraComponent.h"
+#include "GameFramework/SpringArmComponent.h"
+
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "AdventureCharacter.generated.h"
@@ -38,6 +41,12 @@ protected:
 	class UInputAction* MoveAction;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input");
 	class UInputAction* InteractAction;
+
+	//Camera
+	UPROPERTY(EditAnywhere, BlueprintReadOnly);
+	UCameraComponent* Camera;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly);
+	USpringArmComponent* SpringArm;
 
 public:
 	// Called every frame
