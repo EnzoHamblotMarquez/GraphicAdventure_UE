@@ -32,7 +32,6 @@ void AAdventureCharacter::BeginPlay()
 		}
 	}
 
-	//UE_LOG(LogTemp, Warning, TEXT("Class name: %s"), *GetClass()->GetName());
 	UCharacterMovementComponent* CharMov = GetCharacterMovement();
 	if (CharMov)
 	{
@@ -66,13 +65,6 @@ void AAdventureCharacter::Move(const FInputActionValue& value)
 		//Add Movement
 		AddMovementInput(GetActorForwardVector(), movementVector.Y);
 		AddMovementInput(FVector::RightVector, movementVector.X);
-		/*UE_LOG(LogTemp, Warning, TEXT("Move X: %f"), movementVector.X);
-		UE_LOG(LogTemp, Warning, TEXT("Move Y: %f"), movementVector.Y);*/
-
-		//UCharacterMovementComponent* CharMov = GetCharacterMovement();
-		//UE_LOG(LogTemp, Warning, TEXT("MovementMode: %d"), CharMov->MovementMode);
-
-		//UE_LOG(LogTemp, Warning, TEXT("Move X: %f, Y: %f"), movementVector.X, movementVector.Y);
 	}
 }
 
@@ -80,28 +72,8 @@ void AAdventureCharacter::Move(const FInputActionValue& value)
 void AAdventureCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-
-	//AddMovementInput(GetActorForwardVector(), 100.0f);
-
-	/*FVector NewLocation = GetActorLocation();
-	NewLocation.X += 200.f * DeltaTime;
-	SetActorLocation(NewLocation);
-
-	UCharacterMovementComponent* CharMov = GetCharacterMovement();
-	if (!CharMov)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("CharacterMovementComponent is NULL"));
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("MaxWalkSpeed: %f, MovementMode: %d"),
-			CharMov->MaxWalkSpeed, CharMov->MovementMode);
-	}*/
-
 }
 
-// Called to bind functionality to input
 void AAdventureCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
