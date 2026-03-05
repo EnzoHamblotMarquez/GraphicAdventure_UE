@@ -48,7 +48,7 @@ public:
 	FInteractionDelegate OnNpcInteraction;
 
 	// Function to trigger the event
-	UFUNCTION(BlueprintCallable, Category = "Events") //! //? In case someone wants to add an interaction through blueprints
+	UFUNCTION(BlueprintCallable, Category = "Events")
 	void TriggerInteraction(AActor* interactable);
 		
 };

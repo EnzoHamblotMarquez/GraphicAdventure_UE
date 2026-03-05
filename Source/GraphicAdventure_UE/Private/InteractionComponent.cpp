@@ -58,8 +58,19 @@ void UInteractionComponent::CheckInteractionCone(AActor& interactable, AActor& p
 	//UE_LOG(LogTemp, Warning, TEXT("AngleCos: %f, CosValue: %f"), dot, cosValue);
 	if (dot > cosValue)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Event"));
+		AActor* ptr = &interactable;
+		TriggerInteraction(ptr);
 	}
 	
 }
+
+void UInteractionComponent::TriggerInteraction(AActor* interactable)
+{
+	if (interactable == NPC)
+	{
+		OnNpcInteraction.Broadcast();
+		UE_LOG(LogTemp, Warning, TEXT("Event"));
+	}
+}
+
 
