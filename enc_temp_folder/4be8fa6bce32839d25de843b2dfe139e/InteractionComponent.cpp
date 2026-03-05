@@ -69,7 +69,7 @@ void UInteractionComponent::TriggerInteraction(AActor* interactable)
 	if (interactable == NPC)
 	{
 		OnNpcInteraction.Broadcast();
-		//UE_LOG(LogTemp, Warning, TEXT("Event"));
+		UE_LOG(LogTemp, Warning, TEXT("Event"));
 	}
 }
 
