@@ -30,6 +30,9 @@ protected:
 	AActor* NPC;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Interaction");
+	AActor* Door;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Interaction");
 	float InteractionRadius = 10.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Interaction");
@@ -46,6 +49,8 @@ public:
 	// Blueprint-accessible Event Dispatcher
 	UPROPERTY(BlueprintAssignable, Category = "Events")
 	FInteractionDelegate OnNpcInteraction;
+	UPROPERTY(BlueprintAssignable, Category = "Events")
+	FInteractionDelegate OnDoorInteraction;
 
 	// Function to trigger the event
 	UFUNCTION(BlueprintCallable, Category = "Events") //! //? In case someone wants to add an interaction through blueprints

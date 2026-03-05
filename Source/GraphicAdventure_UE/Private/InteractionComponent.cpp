@@ -71,6 +71,12 @@ void UInteractionComponent::TriggerInteraction(AActor* interactable)
 		OnNpcInteraction.Broadcast();
 		//UE_LOG(LogTemp, Warning, TEXT("Event"));
 	}
+
+	if (interactable == Door)
+	{
+		OnDoorInteraction.Broadcast();
+		//UE_LOG(LogTemp, Warning, TEXT("Event"));
+	}
 }
 
 
