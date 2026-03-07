@@ -34,6 +34,7 @@ void UInteractionComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 void UInteractionComponent::OnInteraction()
 {
 	CheckInteractionRadius(*NPC, *Owner);
+	CheckInteractionRadius(*Door, *Owner);
 }
 
 void UInteractionComponent::CheckInteractionRadius(AActor& interactable, AActor& player)
