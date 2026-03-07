@@ -1,0 +1,162 @@
+﻿# Game Spanish translation.
+# Fill out your copyright notice in the Description page of Project Settings.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Game\n"
+"POT-Creation-Date: 2026-03-07 20:05\n"
+"PO-Revision-Date: 2026-03-07 20:05\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Key:	9B29AA9C4E58F3FC1A9FB8BD8D9614E3
+#. SourceLocation:	/Game/Blueprints/Dialogue/Dialogue_DataTable.Dialogue_DataTable.1.Dialogue_4_CCCB7AE04CBE91EC91B7F0B7BBF7E9F1
+#: /Game/Blueprints/Dialogue/Dialogue_DataTable.Dialogue_DataTable.1.Dialogue_4_CCCB7AE04CBE91EC91B7F0B7BBF7E9F1
+msgctxt ",9B29AA9C4E58F3FC1A9FB8BD8D9614E3"
+msgid "(A deep sigh that sounds like a rockslide) Oh, great... another one staring at me without saying a single word. What’s the matter? Are you stone-faced? Ha! Geological humor, you wouldn't get it."
+msgstr "(Suspiro profundo que suena a desprendimiento de rocas) Mira qué bien, otro que viene a mirarme fijamente sin decir ni 'mu'. ¿Qué pasa? ¿Te has quedado de piedra? Ja. Humor geológico, no lo entenderías."
+
+#. Key:	80281DEA45E5F2501A3B88A0963F3D08
+#. SourceLocation:	/Game/Blueprints/Dialogue/Dialogue_DataTable.Dialogue_DataTable.2.Dialogue_4_CCCB7AE04CBE91EC91B7F0B7BBF7E9F1
+#: /Game/Blueprints/Dialogue/Dialogue_DataTable.Dialogue_DataTable.2.Dialogue_4_CCCB7AE04CBE91EC91B7F0B7BBF7E9F1
+msgctxt ",80281DEA45E5F2501A3B88A0963F3D08"
+msgid "I assume you're here because you want to get off this island. Typical 'leg-owner' behavior: always moving from one place to another. I’ve been sitting here since the volcano was a teenager and you don’t hear me complaining. But fine, if you want a ship to pick you up before you start growing lichens on your ears, you’re going to need the Great Beacon."
+msgstr "Supongo que estás aquí porque quieres largarte de la isla. Típico de los seres con patas: siempre moviéndose de un lado a otro. Yo llevo aquí desde que el volcán era un adolescente y no me quejo. Pero bueno, si quieres que un barco te recoja antes de que te salgan líquenes en las orejas, vas a necesitar la Gran Hoguera."
+
+#. Key:	C766918E4DC234212FB8A5BA8E74D8FB
+#. SourceLocation:	/Game/Blueprints/Dialogue/Dialogue_DataTable.Dialogue_DataTable.3.Dialogue_4_CCCB7AE04CBE91EC91B7F0B7BBF7E9F1
+#: /Game/Blueprints/Dialogue/Dialogue_DataTable.Dialogue_DataTable.3.Dialogue_4_CCCB7AE04CBE91EC91B7F0B7BBF7E9F1
+msgctxt ",C766918E4DC234212FB8A5BA8E74D8FB"
+msgid "Don't look at me like that, I don’t carry matches. The ignition mechanism is a runic puzzle up there. It’s a security system to keep any clueless seagull from starting a forest fire. You have to align the totems in the right order; do it correctly, and boom!, smoke signal. Do it wrong... well, let’s just say you’ll have plenty of time to learn how to talk to the palm trees."
+msgstr "No me mires así, no tengo cerillas. El mecanismo para encenderla es un puzzle rúnico que está ahí arriba. Es un sistema de seguridad para evitar que cualquier gaviota despistada provoque un incendio forestal. Tienes que alinear los tótems en el orden correcto; si lo haces bien, ¡pum!, señal de humo. Si lo haces mal... bueno, digamos que tendrás mucho tiempo para aprender a hablar con las palmeras."
+
+#. Key:	591B315C42424CCB14EC77BCBB8E75F4
+#. SourceLocation:	/Game/Blueprints/Dialogue/Dialogue_DataTable.Dialogue_DataTable.4.Dialogue_4_CCCB7AE04CBE91EC91B7F0B7BBF7E9F1
+#: /Game/Blueprints/Dialogue/Dialogue_DataTable.Dialogue_DataTable.4.Dialogue_4_CCCB7AE04CBE91EC91B7F0B7BBF7E9F1
+msgctxt ",591B315C42424CCB14EC77BCBB8E75F4"
+msgid "Come on, move that calcium skeleton of yours. The puzzle isn't going to solve itself and I don’t plan on lifting an eyebrow to help you. Mainly because I can’t. Good luck, pebble-brain!"
+msgstr "Venga, mueve ese esqueleto de calcio. El puzzle no se va a resolver solo y yo no pienso mover ni una ceja para ayudarte. Principalmente porque no puedo. ¡Suerte, cara-de-suelo!"
+
+#. Key:	9DBE6F5E4DAA3FD6471A2A92632F7D8A
+#. SourceLocation:	/Game/Blueprints/Dialogue/UW_Dialogue.UW_Dialogue_C:WidgetTree.dialoguetext.Text
+#: /Game/Blueprints/Dialogue/UW_Dialogue.UW_Dialogue_C:WidgetTree.dialoguetext.Text
+msgctxt ",9DBE6F5E4DAA3FD6471A2A92632F7D8A"
+msgid "Text"
+msgstr "Text"
+
+#. Key:	A6C937A9472D01E74F9F98BCB28B5071
+#. SourceLocation:	/Game/Blueprints/Dialogue/UW_Dialogue.UW_Dialogue_C:WidgetTree.Speakername.Text
+#: /Game/Blueprints/Dialogue/UW_Dialogue.UW_Dialogue_C:WidgetTree.Speakername.Text
+msgctxt ",A6C937A9472D01E74F9F98BCB28B5071"
+msgid "NAME"
+msgstr "NAME"
+
+#. Key:	60B2D50A45A7680A270270A5C17B8673
+#. SourceLocation:	/Game/Blueprints/UW/E_PieceOrientation.E_PieceOrientation.DisplayNameMap(0 - Value).DisplayNameMap
+#: /Game/Blueprints/UW/E_PieceOrientation.E_PieceOrientation.DisplayNameMap(0 - Value).DisplayNameMap
+msgctxt ",60B2D50A45A7680A270270A5C17B8673"
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#. Key:	1C058F654701A3AF609F7086351EC49F
+#. SourceLocation:	/Game/Blueprints/UW/E_PieceOrientation.E_PieceOrientation.DisplayNameMap(1 - Value).DisplayNameMap
+#: /Game/Blueprints/UW/E_PieceOrientation.E_PieceOrientation.DisplayNameMap(1 - Value).DisplayNameMap
+msgctxt ",1C058F654701A3AF609F7086351EC49F"
+msgid "Vertical"
+msgstr "Vertical"
+
+#. Key:	F067D02847261136957761B101DC2E33
+#. SourceLocation:	/Game/Blueprints/UW/UW_Board.UW_Board_C:WidgetTree.TextBlock_136.Text
+#: /Game/Blueprints/UW/UW_Board.UW_Board_C:WidgetTree.TextBlock_136.Text
+msgctxt ",F067D02847261136957761B101DC2E33"
+msgid "LEVEL COMPLETED"
+msgstr "NIVEL COMPLETADO"
+
+#. Key:	A795531040E6643279CE4E938798C766
+#. SourceLocation:	/Game/Blueprints/UW/UW_MainMenu.UW_MainMenu_C:WidgetTree.CAT.ToolTipText
+#: /Game/Blueprints/UW/UW_MainMenu.UW_MainMenu_C:WidgetTree.CAT.ToolTipText
+msgctxt ",A795531040E6643279CE4E938798C766"
+msgid "CAT"
+msgstr "CAT"
+
+#. Key:	CF6801B04A1A6B53E595D79854E5A43A
+#. SourceLocation:	/Game/Blueprints/UW/UW_MainMenu.UW_MainMenu_C:WidgetTree.ENG.ToolTipText
+#: /Game/Blueprints/UW/UW_MainMenu.UW_MainMenu_C:WidgetTree.ENG.ToolTipText
+msgctxt ",CF6801B04A1A6B53E595D79854E5A43A"
+msgid "ENG"
+msgstr "ENG"
+
+#. Key:	9A459FCB4F098627E22A199DD939F259
+#. SourceLocation:	/Game/Blueprints/UW/UW_MainMenu.UW_MainMenu_C:WidgetTree.Exit.ToolTipText
+#: /Game/Blueprints/UW/UW_MainMenu.UW_MainMenu_C:WidgetTree.Exit.ToolTipText
+msgctxt ",9A459FCB4F098627E22A199DD939F259"
+msgid "Exit"
+msgstr "Salir"
+
+#. Key:	306CA78F439A0CEC0544D8AABF538482
+#. SourceLocation:	/Game/Blueprints/UW/UW_MainMenu.UW_MainMenu_C:WidgetTree.StartGame.ToolTipText
+#: /Game/Blueprints/UW/UW_MainMenu.UW_MainMenu_C:WidgetTree.StartGame.ToolTipText
+msgctxt ",306CA78F439A0CEC0544D8AABF538482"
+msgid "Start Game"
+msgstr "Empezar Partida"
+
+#. Key:	CFECB852404800B84F9057A1E5E773BB
+#. SourceLocation:	/Game/Blueprints/UW/UW_MainMenu.UW_MainMenu_C:WidgetTree.TextBlock_115.Text
+#: /Game/Blueprints/UW/UW_MainMenu.UW_MainMenu_C:WidgetTree.TextBlock_115.Text
+msgctxt ",CFECB852404800B84F9057A1E5E773BB"
+msgid "Start Game"
+msgstr "Empezar Partida"
+
+#. Key:	B5E6EABF4114CB2976D9CCA98F1A964D
+#. SourceLocation:	/Game/Blueprints/UW/UW_MainMenu.UW_MainMenu_C:WidgetTree.TextBlock_184.Text
+#: /Game/Blueprints/UW/UW_MainMenu.UW_MainMenu_C:WidgetTree.TextBlock_184.Text
+msgctxt ",B5E6EABF4114CB2976D9CCA98F1A964D"
+msgid "Exit"
+msgstr "Salir"
+
+#. Key:	F53CABA04110607BFBF802A7D9D756ED
+#. SourceLocation:	/Game/Blueprints/UW/UW_PauseMenu.UW_PauseMenu_C:WidgetTree.Button_E.ToolTipText
+#: /Game/Blueprints/UW/UW_PauseMenu.UW_PauseMenu_C:WidgetTree.Button_E.ToolTipText
+msgctxt ",F53CABA04110607BFBF802A7D9D756ED"
+msgid "Exit"
+msgstr "Salir"
+
+#. Key:	3C685C4F4532C97F6DFF82AA03E69360
+#. SourceLocation:	/Game/Blueprints/UW/UW_PauseMenu.UW_PauseMenu_C:WidgetTree.Button_MM.ToolTipText
+#: /Game/Blueprints/UW/UW_PauseMenu.UW_PauseMenu_C:WidgetTree.Button_MM.ToolTipText
+msgctxt ",3C685C4F4532C97F6DFF82AA03E69360"
+msgid "Main Menu"
+msgstr "Menú Principal"
+
+#. Key:	F3BB38614EB90E74E706DE80C8736988
+#. SourceLocation:	/Game/Blueprints/UW/UW_PauseMenu.UW_PauseMenu_C:WidgetTree.Button_R.ToolTipText
+#: /Game/Blueprints/UW/UW_PauseMenu.UW_PauseMenu_C:WidgetTree.Button_R.ToolTipText
+msgctxt ",F3BB38614EB90E74E706DE80C8736988"
+msgid "Resume"
+msgstr "Resumir"
+
+#. Key:	632D82064765C1F4B10997A9D893BD14
+#. SourceLocation:	/Game/Blueprints/UW/UW_PauseMenu.UW_PauseMenu_C:WidgetTree.TextBlock_225.Text
+#: /Game/Blueprints/UW/UW_PauseMenu.UW_PauseMenu_C:WidgetTree.TextBlock_225.Text
+msgctxt ",632D82064765C1F4B10997A9D893BD14"
+msgid "Exit"
+msgstr "Salir"
+
+#. Key:	4A17D1E34307708A491CF2BD9AE8AD5B
+#. SourceLocation:	/Game/Blueprints/UW/UW_PauseMenu.UW_PauseMenu_C:WidgetTree.TextBlock_300.Text
+#: /Game/Blueprints/UW/UW_PauseMenu.UW_PauseMenu_C:WidgetTree.TextBlock_300.Text
+msgctxt ",4A17D1E34307708A491CF2BD9AE8AD5B"
+msgid "Resume"
+msgstr "Resumir"
+
+#. Key:	7DCEAF2245EBF5B7350734918D834697
+#. SourceLocation:	/Game/Blueprints/UW/UW_PauseMenu.UW_PauseMenu_C:WidgetTree.TextBlock_87.Text
+#: /Game/Blueprints/UW/UW_PauseMenu.UW_PauseMenu_C:WidgetTree.TextBlock_87.Text
+msgctxt ",7DCEAF2245EBF5B7350734918D834697"
+msgid "Main Menu"
+msgstr "Menú Principal"
+
