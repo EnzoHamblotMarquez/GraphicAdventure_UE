@@ -71,15 +71,34 @@ void UInteractionComponent::TriggerInteraction(AActor* interactable)
 
 void UInteractionComponent::CheckInteractionRange(AActor& interactable, AActor& player)
 {
-	float Distance = (interactable.GetActorLocation() - player.GetActorLocation()).Size();
+	float Distance = FVector::Distance(
+		interactable.GetActorLocation(),
+		player.GetActorLocation());
 
-	if (Distance >= InteractionRadius)
+	if (Distance <= InteractionRadius)
 	{
-		AwayFromInteractable.Broadcast();
+		ActorsInRange.Add(&interactable);
 	}
 	else
 	{
-		CloseToInteractable.Broadcast();
+		ActorsInRange.Remove(&interactable);
+	}
+
+	if (ActorsInRange.Num() > 0)
+	{
+		if (!CloseSent)
+		{
+			CloseToInteractable.Broadcast();
+			CloseSent = true;
+		}
+	}
+	else
+	{
+		if (CloseSent)
+		{
+			AwayFromInteractable.Broadcast();
+			CloseSent = false;
+		}
 	}
 }
 

@@ -38,6 +38,8 @@ protected:
 	void CheckInteractionCone(AActor& interactable, AActor& player);
 
 	void CheckInteractionRange(AActor& interactable, AActor& player);
+	TSet<AActor*> ActorsInRange;
+	bool CloseSent = false;
 
 public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
