@@ -33,6 +33,7 @@ void UInteractionComponent::CheckInteractionRadius(AActor& interactable, AActor&
 
 	if (Distance < InteractionRadius)
 	{
+		CloseToInteractable.Broadcast();
 		CheckInteractionCone(interactable, player);
 	}
 }
