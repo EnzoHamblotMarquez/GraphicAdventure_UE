@@ -31,6 +31,7 @@ void UInteractionComponent::CheckInteractionRadius(AActor& interactable, AActor&
 {
 	float Distance = (interactable.GetActorLocation() - player.GetActorLocation()).Size();
 
+	AwayFromInteractable.Broadcast();
 	if (Distance < InteractionRadius)
 	{
 		CloseToInteractable.Broadcast();

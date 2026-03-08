@@ -49,6 +49,9 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = "Events")
 	FInteractionDelegate CloseToInteractable;
 
+	UPROPERTY(BlueprintAssignable, Category = "Events")
+	FInteractionDelegate AwayFromInteractable;
+
 	UFUNCTION(BlueprintCallable, Category = "Events")
 	void TriggerInteraction(AActor* interactable);
 
