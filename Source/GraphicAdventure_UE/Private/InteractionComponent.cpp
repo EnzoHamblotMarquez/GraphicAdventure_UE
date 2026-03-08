@@ -19,6 +19,9 @@ void UInteractionComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	CheckInteractionRange(*NPC, *Owner);
+	CheckInteractionRange(*Door, *Owner);
+
 }
 
 void UInteractionComponent::OnInteraction()
@@ -31,10 +34,8 @@ void UInteractionComponent::CheckInteractionRadius(AActor& interactable, AActor&
 {
 	float Distance = (interactable.GetActorLocation() - player.GetActorLocation()).Size();
 
-	AwayFromInteractable.Broadcast();
 	if (Distance < InteractionRadius)
 	{
-		CloseToInteractable.Broadcast();
 		CheckInteractionCone(interactable, player);
 	}
 }
@@ -67,5 +68,20 @@ void UInteractionComponent::TriggerInteraction(AActor* interactable)
 		OnDoorInteraction.Broadcast();
 	}
 }
+
+void UInteractionComponent::CheckInteractionRange(AActor& interactable, AActor& player)
+{
+	float Distance = (interactable.GetActorLocation() - player.GetActorLocation()).Size();
+
+	if (Distance >= InteractionRadius)
+	{
+		AwayFromInteractable.Broadcast();
+	}
+	else
+	{
+		CloseToInteractable.Broadcast();
+	}
+}
+
 
 

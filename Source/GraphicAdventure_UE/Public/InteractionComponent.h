@@ -37,6 +37,8 @@ protected:
 	void CheckInteractionRadius(AActor& interactable, AActor& player);
 	void CheckInteractionCone(AActor& interactable, AActor& player);
 
+	void CheckInteractionRange(AActor& interactable, AActor& player);
+
 public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
